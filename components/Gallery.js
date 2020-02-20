@@ -1,5 +1,5 @@
 import React ,{Component } from 'react';
-
+import Post from './Post';
 
 class Gallery extends Component{
 
@@ -15,7 +15,7 @@ class Gallery extends Component{
           //let url = 'https://i.picsum.photos/id/100/800/800.jpg'
           for(var i=0 ; i<50 ; i++)
           {
-              images.push(`https://i.picsum.photos/id/${i}/1200/500.jpg`);
+              images.push(`https://i.picsum.photos/id/${i}/400/400.jpg`);
           }
 
           this.setState({
@@ -33,29 +33,16 @@ class Gallery extends Component{
           console.log(this.state.images);
 
           let imagesList = this.state.images.map((imageurl , index) => {
-                  return(
-                        <div className = "row" key={index}>
-                        
-                              <div clasName="col-md mt-3">
-                              
-                                    <div className = "card mt-2 shadow">
-                                    
-                                          <img src={imageurl} style={{height : 'auto'}} className="card-img-top" alt="soryy bros"/>
-                                          <h3 className="text-center text-success">Surendra Reddy </h3>
 
-                                    </div> 
-                              
-                              
-                              </div>
-                        
-                        </div>
-                  )
+                  return <Post key = {index} imageurl={imageurl}/>
           })
 
           return(
                     
                    <div className = "container">
-                        { imagesList }
+                          <div className = "row">
+                              { imagesList }
+                           </div>
                    </div>     
                     
           )

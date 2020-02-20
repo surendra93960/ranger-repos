@@ -11,8 +11,8 @@ export default class extends Component{
           
             return(
                 
-              <div>
-                      <h1>THis is a Home component </h1>
+              <div className="container">
+                      <h1 className="text-center bg-primary text-white mt-5 p-2">Ranger Repos !!</h1>
                       <Gallery />
               </div>
 
