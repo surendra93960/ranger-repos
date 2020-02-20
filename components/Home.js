@@ -4,9 +4,6 @@ import Gallery from './Gallery';
 
 export default class extends Component{
 
-
-    
-
       render(){
           
             return(
